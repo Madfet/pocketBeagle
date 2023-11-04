@@ -7,7 +7,7 @@ When building for the first time we need to install docker:
 For ubuntu:
 
 ```bash
-    sudo apt install docker
+    sudo apt install docker docker-buildx
     sudo usermod -a -G docker ${USER}
     sudo reboot
 ```
