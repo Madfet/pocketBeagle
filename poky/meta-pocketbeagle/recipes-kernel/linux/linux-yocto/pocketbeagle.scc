@@ -3,10 +3,18 @@ define KMACHINE pocketbeagle
 define KTYPE standard
 define KARCH arm
 
-include bsp/pocketbeagle/system-type.scc
-include bsp/pocketbeagle/fix-console.scc
-include bsp/pocketbeagle/update-leds.scc
-include bsp/pocketbeagle/omap-crypto.scc
-include bsp/pocketbeagle/pwm-counter.scc
-include bsp/pocketbeagle/pru-remoteproc-mbox.scc
-include bsp/pocketbeagle/usb.cfg
+include cfg/system-type.scc
+include cfg/fix-console.scc
+include cfg/update-leds.scc
+include cfg/omap-crypto.scc
+include cfg/pwm-counter.scc
+include cfg/pru-remoteproc-mbox.scc
+include cfg/usb.scc
+include cfg/no_ipv6.scc
+
+patch 0001-arch-arm-configs-omap2plus_defconfig-remove-removed-.patch
+patch 0001-ARM-dts-am335x-pocketbeagle-update-LED-information.patch
+patch 0002-ARM-dts-am335x-pocketbeagle-remove-dependency-cycle.patch
+patch 0003-ARM-dts-am335x-pocketbeagle-enable-pru.patch
+patch 0004-ARM-dts-am335x-pocketbeagle-add-missing-GPIO-mux.patch
+
